@@ -18,14 +18,11 @@ socket.on('newMessage', function(message) {
 
 jQuery('#form').on('submit', function (e) {
   e.preventDefault();
-  console.log('Button Clicked..');
-
-  var msg = jQuery('#message').val();
-  console.log("message", msg);
+  var msgTxtBox = jQuery('#message');
 
   socket.emit('createMessage', {
-    from: "UI", text: msg, createAt: new Date().getDate()
+    from: "UI", text: msgTxtBox.val(), createAt: new Date().getDate()
   }, function() {
-    console.log("Acknowledge !!");
+    msgTxtBox.val('');
   });
 });
