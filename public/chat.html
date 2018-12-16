@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <title>Chat | ChatAp!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body class="chat">
+
+    <div class="chat__sidebar">
+      <h3>People</h3>
+      <div id="users">
+      </div>
+    </div>
+
+    <div class="chat__main">
+      <ol id="messages" class="chat__messages"></ol>
+      <div class="chat__footer">
+        <form id='form'>
+          <input id="message" placeholder="message" autofocus autocomplete="off" />
+          <button>Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script id='message-template' type='text/template'>
+      <li class="message">
+        <div class="message__title">
+          <h4>{{from}}</h4>
+          <span>{{createAt}}</span>
+        </div>
+        <div class="message__body">
+          <p>{{text}}</p>
+        </div>
+      </li>
+    </script>
+
+
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/js/libs/moment.js" charset="utf-8"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="/js/libs/mustache.js" charset="utf-8"></script>
+    <script src="/js/chat.js" charset="utf-8"></script>
+    <script src="/js/libs/deparam.js" charset="utf-8"></script>
+
+  </body>
+</html>
