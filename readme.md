@@ -1,9 +1,9 @@
-This Code base contains basic chat applicaion using web socket.
+This Code base contains group chat applicaion using web socket.
 
 Development is in progress.
 
 Technology:
-Node
+NodeJs
 JQuery
 
 Editor:
