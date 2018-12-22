@@ -1,10 +1,18 @@
 This Code base contains group chat applicaion using web socket.
 
+Feature Included
+----------------
+1) Group Chat
+2) File Sharing
+
 Development is in progress.
 
 Technology:
 NodeJs
+Socket.io
+Express
 JQuery
+
 
 Editor:
 Atom
