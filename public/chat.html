@@ -17,6 +17,8 @@
       <div class="chat__footer">
         <form id='form'>
           <input id="message" placeholder="message" autofocus autocomplete="off" />
+          <input type="file" id="myFileInput"  style="display:none;"  />
+          <button id="upload" type="button" onclick="document.getElementById('myFileInput').click()">Upload</button>
           <button>Send</button>
         </form>
       </div>
@@ -34,6 +36,17 @@
       </li>
     </script>
 
+    <script id='file-message-template' type='text/template'>
+      <li class="message">
+        <div class="message__title">
+          <h4>{{from}}</h4>
+          <span>{{createAt}}</span>
+        </div>
+        <div class="message__body">
+          <p><a href="/{{filename}}" download>File size {{size}} : Download</a></p>
+        </div>
+      </li>
+    </script>
 
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
     <script src="/js/libs/moment.js" charset="utf-8"></script>
